@@ -1,0 +1,145 @@
+.loy-area {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.loy-card::before {
+	content: "";
+	background-repeat: no-repeat, no-repeat;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.75;
+	border-radius: 25px;
+}
+
+.loy-card {
+	display: inline-block;
+	position: relative;
+	background-position: center;
+	width: 280px;
+	aspect-ratio: 16/9;
+	border-radius: 25px;
+	box-shadow: 0 18px 18px #ccc;
+	margin: 16px;
+	padding: 10px;
+	transition: 0.2s transform;
+}
+.loy-card:active {
+	transform: scale(0.9) !important;
+	box-shadow: 0px 0px 10px rgb(128, 128, 128);
+	/* transition: 0.05s all; */
+}
+.loy-card:hover {
+	transform: scale(0.95);
+}
+
+.biedronka::before {
+	background-image: url("./pics/biedronka.png");
+	transform: translate(0, 0) scale(1);
+}
+.lidl::before {
+	background-image: url("./pics/lidl.png");
+}
+
+.payback::before {
+	background-image: url("./pics/payback.png");
+}
+.zabka::before {
+	background-image: url("./pics/zabka.png");
+}
+.rossmann::before {
+	background-image: url("./pics/rossmann.png");
+}
+
+.current-biedronka {
+	background-color: rgb(170, 39, 39);
+}
+.current-lidl {
+	background-color: rgb(66, 165, 240);
+}
+.current-payback {
+	background-color: rgb(2, 91, 139);
+}
+.current-rossmann {
+	background-color: rgb(225, 77, 114);
+}
+.current-zabka {
+	background-color: rgb(32, 138, 62);
+}
+h3 {
+	position: relative;
+	color: rgb(222, 216, 216);
+	bottom: 0;
+	text-align: center;
+	backdrop-filter: blur(5px);
+	z-index: 2;
+}
+
+h2 {
+	position: relative;
+	color: rgb(222, 216, 216);
+	bottom: 0;
+	margin: 5px;
+	text-align: center;
+	backdrop-filter: blur(5px);
+	z-index: 2;
+}
+
+.large {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(1.5);
+	background-color: rgb(170, 39, 39);
+	background-image: none;
+	z-index: 9999;
+}
+.current-hidden {
+	opacity: 0 !important;
+	width: 120px;
+	height: 80px;
+
+	top: -100px !important;
+	left: -100px !important;
+}
+.current {
+	opacity: 1;
+	width: 480px;
+	transition: all 0.3s ease-in;
+	display: flex;
+}
+.current,
+.current-hidden {
+	position: absolute;
+	aspect-ratio: 16/9;
+	border-radius: 25px;
+	box-shadow: 0 18px 18px #ccc;
+	margin: 16px;
+	z-index: 9999;
+	padding: 10px;
+	flex-wrap: wrap;
+	top: 30%;
+	white-space: pre;
+}
+
+.close {
+	margin-left: auto;
+	margin-right: 8px;
+	margin-top: 4px;
+	height: fit-content;
+}
+.close:hover {
+	transform: scale(1.1);
+}
+.close:active {
+	transform: scale(1.2);
+}
+.blur {
+	filter: blur(3px);
+}
+h3.blur {
+	backdrop-filter: blur(0px) !important;
+}
